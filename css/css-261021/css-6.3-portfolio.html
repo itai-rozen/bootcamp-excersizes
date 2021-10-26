@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Building: Basic Layout | First web page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <style>
+        .card {
+            font-family: 'Zen Kurenaido', sans-serif;
+            width: 50%;
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+            background: url(./../../images/background.jfif);
+            background-size: cover;
+            border-radius: 13px;
+            box-shadow: 5px 26px 19px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .card img {
+            border-radius: 13%;
+            height: 120px;
+            width: auto;
+        }
+
+        .about-text {
+            line-height: 1.6em;
+        }
+
+        li {
+            display: inline-block;
+            /* padding: 5px; */
+            margin: 0 10px ;
+        }
+
+        li i {
+            font-size: 2.5em;
+        }
+        h1,h2 {
+            margin: 3px;
+        }
+
+        header {
+            background: -webkit-linear-gradient(rgb(75, 40, 231), #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        button {
+            border-radius: 13px;
+            border: 2px solid black;
+            background-color: #ccc;
+            color: #111;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #111;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="image-container">
+            <img class="my-image" width="200" src="./../../images/me.jpg" alt="picture of myself" srcset="">
+        </div>
+        <header>
+            <h1>Itai Rozen</h1>
+            <h2>Super-Programmer.</h2>
+        </header>
+
+        <main class="about">
+            <h2 class="about-header">About me..</h2>
+            <p class="about-text">
+                <i class="fas fa-music"></i>
+                &nbsp;
+                In West Philadelphia born and raised
+                On the playground is where I spent most of my days
+                Chillin' out, maxin', relaxin' all cool
+                And all shootin' some b-ball outside of the school...
+                <a href="https://genius.com/Dj-jazzy-jeff-and-the-fresh-prince-the-fresh-prince-of-bel-air-lyrics">
+                    read more
+                </a>
+                &nbsp;
+                <i class="fas fa-music"></i>
+            </p>
+
+
+        </main>
+        <div class="btn-container">
+            <button>Push Me.</button>
+        </div>
+        <div class="contact">
+            <h2 class="contact-header"><i class="fas fa-robot"></i> Follow Me on:</h2>
+            <nav>
+                <ul class="social-links">
+                    <li><a target="_blank" href="http://www.linkedin.com/in/itai-rozen"><i
+                                class="fab fa-linkedin"></i></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/itai.rozen/"><i
+                                class="fab fa-facebook"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        <footer>All rights reserved to ME &copy;</footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/5517ce3426.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
