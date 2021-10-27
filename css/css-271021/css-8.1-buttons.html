@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <style>
+        * {
+            text-align: center;
+            box-sizing: border-box;
+            color: white;
+
+        }
+
+        body {
+            background-color: #555;            
+        }
+
+        .no-border {
+            border: none;
+        }
+
+
+        
+        .ghost {
+            background-color: transparent;
+            border: 2px solid ;
+        }
+
+        button {
+            margin:0 15px;
+            transition: .3s;
+        }
+        button:hover {
+            transition: .3s;
+        }
+
+        .round {
+            border-radius: 50px;
+        }
+
+        .large {
+            height: 50px;
+            width: 140px;
+            font-size: 1.1em;
+        }
+
+        .medium {
+            height: 40px;
+            width: 100px;
+            font-size: 0.9em;
+        }
+
+        .small {
+            height: 30px;
+            width: 70px;
+            font-size: 0.8em;
+        }
+
+        .btn-1 {
+            background-color: rgb(50,200,30);
+        }
+        .btn-1:hover {
+            background-color: rgb(50, 180, 30);
+        }
+        .btn-2 {
+            background-color: rgb(255, 0, 0);
+        }
+        .btn-2:hover {
+            background-color: rgb(240, 0, 0);
+        }
+        .btn-3 {
+            background-color: blue;
+        }
+        .btn-3:hover {
+            background-color: rgb(0, 0, 230);
+        }
+
+        .btn-4 {
+            background-color: #ffa500;            
+        }
+        .btn-4:hover {
+            background-color: #efa500;            
+        }
+        .btn-5 {
+            background-color: #FFDB58;
+        }
+        .btn-5:hover {
+            background-color: #FfDB28;
+        }
+        .btn-6 {
+            background-color:#808080;
+        }
+        .btn-6:hover {
+            background-color: #707070;
+        }
+
+        .btn-7 {
+            border-color: rgb(50, 200, 30);
+        }
+        .btn-7:hover {
+            background-color: rgb(50, 200, 30);
+        }
+
+        .btn-8 {
+            border-color: red;
+        }
+        .btn-8:hover {
+            background-color: red;
+        }
+        .btn-9 {
+            border-color: blue;
+        }
+        .btn-9:hover {
+            background-color: blue;
+        }
+        .btn-10 {
+            border-color: orange;
+        }
+        .btn-10:hover {
+            background-color: orange;
+        }
+        .btn-11 {
+            border-color: #ffdb58;
+        }
+        .btn-11:hover {
+            background-color: #ffdb58;
+        }
+        .btn-12 {
+            border-color: gray;
+        }
+        .btn-12:hover {
+            background-color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Flat</h2>
+    <button class="no-border  btn-1 large">Register</button>
+    <button class="no-border  btn-2 medium" >Clear</button>
+    <button class="no-border  btn-3 small">Submit</button>
+    <h2>Round</h2>
+    <button class="no-border round btn-4 large">Register</button>
+    <button class="no-border round btn-5 medium">Clear</button>
+    <button class="no-border round btn-6 small">Submit</button>
+    <h2>Flat Ghost</h2>
+    <button class=" ghost btn btn-7 large">Register</button>
+    <button class=" ghost btn btn-8 medium">Clear</button>
+    <button class=" ghost btn btn-9 small">Submit</button>
+    <h2>Round Ghost</h2>
+    <button class="round ghost btn-10 large">Register</button>
+    <button class="round ghost  btn-11 medium">Clear</button>
+    <button class="round ghost btn-12 small">Submit</button>
+
+</body>
+</html>
