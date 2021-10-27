@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning 3</title>
+    <style>
+        .box {
+            position: absolute;
+            border: 2px solid black;
+            padding-left: 3px;
+        }
+
+        .box-1 {
+            top: 5px;
+            left: 5px;
+            height: 200px;
+            width: 200px;
+        }
+        .box-2 {
+            top: 120px;
+            left: 120px;
+            height: 200px;
+            width: 150px;
+            z-index: 1;
+            background-color: white;
+        }
+        .box-3 {
+            top: 250px;
+            left: 5px;
+            height: 150px;
+            width: 500px;
+            background-color: white;
+            z-index: 2;
+        }
+        .box-4 {
+            top: 5px;
+            left: 300px;
+            height: 450px;
+            width: 100px;
+            background-color: white;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box-1">div one</div>
+    <div class="box box-2">div two</div>
+    <div class="box box-3">div three</div>
+    <div class="box box-4">div four</div>
+</body>
+</html>
