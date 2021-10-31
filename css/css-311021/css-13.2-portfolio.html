@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Building: Basic Layout | First web page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Zen Kurenaido', sans-serif;
+            text-align: center;
+            background: url('./../../images/background.jfif');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+
+
+        .navbar {
+            background-color: #333;
+            position: sticky;
+            height: 50px;
+            width: auto;
+            margin: 0;
+            padding: 0;
+            top: 0;
+        }
+
+        .navbar li {
+            color: #eee;
+            line-height: 50px;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+
+        .wrapper {
+            margin-top: 60px;
+        }
+
+        .card {
+            width: 50%;
+            margin: 20px auto;
+            height: 500px;
+            padding: 10px;
+            background-size: cover;
+            border-radius: 13px;
+            box-shadow: 5px 26px 19px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .image-container {
+            /* text-align: center; */
+            /* float: left; */
+            display: block;
+            margin-top: 15px;
+        }
+
+        .social-links {
+            padding: 0;
+        }
+
+        img {
+            border-radius: 13%;
+            height: 120px;
+            width: auto;
+        }
+
+        .about {
+            width: 96vw;
+            margin: 5px;
+            float: none;
+            border: 3px dotted black;
+            border-bottom-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .about-header {
+            margin: 0;
+            margin-top: 16px;
+            text-align: left;
+            margin-left: 15px;
+        }
+
+        .about-text {
+            line-height: 1.6em;
+            font-size: 18px;
+            padding: 0px 15px 15px 15px;
+            text-align: left;
+        }
+
+
+        li {
+            display: inline-block;
+            /* padding: 5px; */
+            margin: 0 10px;
+        }
+
+        li i {
+            /* font-size: 5em; */
+        }
+
+        h1,
+        h2 {
+            margin: 3px;
+        }
+
+        .contact-header {
+            padding-top: 15px;
+        }
+
+        header {
+            background: -webkit-linear-gradient(rgb(75, 40, 231), #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        button {
+            border-radius: 13px;
+            border: 2px solid black;
+            background-color: #ccc;
+            color: #111;
+            margin-top: 10px;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #111;
+            color: #ccc;
+        }
+
+        footer {
+            margin: 50px;
+        }
+        .only-widescreen { display: none; }
+        @media screen and (min-width: 960px) {
+            .only-widescreen {
+                display: inline;
+            }
+            .about {
+                width: 48%;
+            }
+            .fr {
+            float: right;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .clr {
+            clear: both;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="wrapper">
+        <figure class="image-container">
+            <img class="my-image" width="200" src="./../../images/me.jpg" alt="picture of myself" srcset="">
+        </figure>
+        <header>
+            <h1>Itai Rozen</h1>
+            <h2>Super-Programmer.</h2>
+        </header>
+
+        <main class="about fl">
+            <h2 class="about-header">A little bit about me..</h2>
+            <p class="about-text">
+                <i class="fas fa-music"></i>
+                &nbsp;
+                In West Philadelphia born and raised
+                On the playground is where I spent most of my days
+                Chillin' out, maxin', relaxin' all cool
+                And all shootin' some b-ball outside of the school
+                When a couple of guys who were up to no good
+                <span class="only-widescreen">
+                    Started makin' trouble in my neighborhood
+                    I got in one little fight and my mom got scared
+                    And said "You're movin' with your auntie and uncle in Bel-Air"
+                    I begged and pleaded with her day after day
+                    But she packed my suitcase and sent me on my way
+                    She gave me a kiss and then she gave me my ticket
+                    I put my Walkman on and said "I might as well kick it"
+                    First class, yo, this is bad
+                    Drinking orange juice out of a champagne glass
+                    Is this what the people of Bel-Air living like?
+                    Hmm, this might be all right
+                    But wait, I hear they're prissy, bourgeois, and all that
+                    Is this the type of place that they should send this cool cat?
+                    I don't think so, I'll see when I get there
+                    I hope they're prepared for the Prince of Bel-Air.
+                    <a href="https://genius.com/Dj-jazzy-jeff-and-the-fresh-prince-the-fresh-prince-of-bel-air-lyrics">
+                        read more
+                    </a>
+                </span>
+                &nbsp;
+                <i class="fas fa-music"></i>
+            </p>
+
+
+        </main>
+        <aside>
+            <div class="projects about fr">
+                <h1>Here are some of my projects..</h1>
+                <p>coming soon...</p>
+            </div>
+        </aside>
+        <div class="clr"></div>
+        <div class="btn-container">
+            <button>Push Me.</button>
+        </div>
+        <div class="card contact">
+            <h2 class="contact-header"><i class="fas fa-robot"></i> Follow Me on:</h2>
+            <ul class="social-links">
+                <li><a target="_blank" href="http://www.linkedin.com/in/itai-rozen"><i
+                            class="fab fa-linkedin fa-4x"></i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/itai.rozen/"><i
+                            class="fab fa-facebook fa-4x"></i></a></li>
+            </ul>
+        </div>
+        <footer>All rights reserved to ME &copy;</footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/5517ce3426.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
