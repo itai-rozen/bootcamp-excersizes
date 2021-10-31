@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex navbar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 1.5rem;
+            padding: 5px;
+            transition: .3s;
+        }
+        *:hover {
+            transition: .3s;
+        }
+        .navbar {
+            background-color: #c4c4c4;
+            color: #222;
+            display: flex;
+            justify-content: space-between;
+            border: 3px solid black;
+        }
+
+        .navbar-list-container {
+            display: flex;
+        }
+
+        .header, li {
+            border-left: 3px solid #000;
+        }
+
+        
+        @media screen and (min-width: 320px) {
+            html {
+                font-size: calc(16px + 12 * ((100vw - 320px) / 1080));
+            }
+        }
+
+        @media screen and (max-width: 678px) {
+            .navbar {
+                flex-flow: column;
+                align-items: center;
+            }
+            .navbar-list-container {
+                flex-flow: column;
+            }
+            .navbar-list-container li {
+                border-left: none;
+                padding-top: 15px;
+                border-top: 3px solid black;
+
+            }
+            .navbar-list-container li:hover {
+                border-top-color:   whitesmoke ;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="div class="header">
+                <h1>Itai Rozen's Portfolio</h1>
+            </div>
+            <ul class="navbar-list-container">
+                <li>About</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
