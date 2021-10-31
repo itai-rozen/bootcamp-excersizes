@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Text</title>
+    <style>
+        body {
+            background-color: #4d4d4d;
+        }
+        .text-box {
+            padding-left: 2rem;
+            color: #ddd;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .bigger-text {
+            font-size: 4rem;
+        }
+        .smaller-text {
+            font-size: 1rem;
+        }
+        @media screen and (max-width:1200px) {
+            .bigger-text {
+                font-size: 3rem;
+            }
+            .smaller-text {
+                font-size: 2rem;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .bigger-text {
+                font-size: 2rem;
+            }
+            .smaller-text {
+                font-size: 3rem;
+            }
+        }
+        @media screen and (max-width:500px) {
+            .bigger-text {
+                font-size: 1rem;
+            }
+            .smaller-text {
+                font-size: 4rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bigger-text text-box">
+        <p>enlarge the width of the screen to make the text bigger & bigger & bigger & bigger...</p>
+        <p>or shorten it to make the text smaller & smaller & smaller & smaller </p>
+    </div>
+    <div class="smaller-text text-box">
+        <p>enlarge the width of the screen to make the text smaller & smaller & smaller & smaller...</p>
+        <p>or shorten it to make the text  bigger & bigger & bigger & bigger </p>
+    </div>
+    
+</body>
+</html>
