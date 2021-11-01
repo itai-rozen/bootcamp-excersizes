@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Box animate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .box {
+            height: 50vh;
+            width: 25vw;
+            background-color: rebeccapurple;
+            line-height: 50vh;
+
+            text-align: center;
+            line-height: 50vh;
+            font-size: 2rem;
+            font-weight: bold;
+
+        }
+
+        .box:before {
+            content: "before pseudo-element";
+
+            background-color: red;
+            width: 25vw;
+            height: 50vh;
+            z-index: 1;
+            position: absolute;
+            top: 25vh;
+            left: 12.5vw;
+
+        }
+
+        .box:hover:before {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+         Element</div>
+</body>
+</html>
