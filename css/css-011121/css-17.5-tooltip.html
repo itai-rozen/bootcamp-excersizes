@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: .3s;
+        }
+
+        *:hover {
+            transition: .3s
+        }
+        body {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #131313;
+            color: #ccc;
+            height: 100vh;
+            font-size: 1.5rem;
+        }
+        .box {
+            padding: 25px;
+            text-align: center;
+        }
+
+        [data-tooltip] {
+            color: #ECA72C;
+            position: relative;
+        }
+
+        .tip::after {
+            content: attr(data-tooltip);
+            position:absolute;
+            bottom: 25px;
+            left: 100%;
+            z-index: 1;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+            width: auto;
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 1px solid #ECA72C;
+            border-radius: 20px;
+            display: none;
+        }
+        .tip:hover::after {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Hover over the highlighted words.</h2>
+    </header>
+    <div class="box">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, aliquid. Suscipit, impedit. Eius debitis qui sint 
+        suscipit praesentium alias cumque, eaque ex corporis est expedita incidunt aperiam ut, odio placeat dolor consequatur 
+        libero velit culpa, distinctio sunt accusantium eligendi? Voluptatum est laudantium dolores fuga quae sed voluptas 
+        consequatur unde facere, <span class="tip" data-tooltip="wow groovy">quaerat</span> fugit, deleniti nostrum nemo, temporibus quam ipsam similique optio doloremque modi 
+        minus corporis reiciendis commodi? Neque nulla obcaecati temporibus veniam saepe dolorem dolore assumenda repellat 
+        dolor, nisi <span class="tip" data-tooltip="and reusable!">voluptate </span> magnam animi, sed dicta nam earum! Dicta, magnam illo iusto dolorum, repellat eligendi 
+        consequuntur quisquam voluptatem laboriosam, quos perferendis odit vitae?
+    </div>
+</body>
+</html>
