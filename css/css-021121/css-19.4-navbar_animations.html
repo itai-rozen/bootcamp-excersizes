@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Animations</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            background-color: yellow;
+        }
+
+        .nav-list {
+            display: flex;
+            font-size: 2rem;
+            list-style: none;
+            height: 70px;
+            justify-content: center;
+        }
+        .nav-item {
+            margin: 5px 10px;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+
+        .nav-item::before,
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background-color: black;
+            transition: all .5s ease-in-out;
+        }
+        .nav-item::before {
+            top: 0;
+            right: 0;
+        }
+
+        .nav-item::after {
+            bottom: 0;
+            left: 0;
+        }
+
+        .nav-item:hover:before,
+        .nav-item:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item "> Home</li>
+            <li class="nav-item">About</li>
+            <li class="nav-item">Services</li>
+            <li class="nav-item">Portfolio</li>
+            <li class="nav-item">Contact</li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
