@@ -29,9 +29,6 @@
 
         }
 
-
-
-
         .box::after {
             animation: move-out .5s forwards ease-in-out;
             content:'';
@@ -40,28 +37,15 @@
             width: 200px;
             transform: translate(-200px);
             background-color: purple;
+            transition: all .5s;
+
         }
 
         .box:hover::after {
-            animation: move-in .5s forwards ease-in-out;
+            transform: translateX(0);
         }
 
-        @keyframes move-in {
-            to{
-                transform: translate(0);
-                background-color: green;
-            }
-        }
-        @keyframes move-out {
-            from{
-                transform: translate(0);
-                background-color: green;
-            }
-            to {
-                transform: translate(-200px);
-                background-color: purple;
-            }
-        }
+
 
     </style>
 </head>

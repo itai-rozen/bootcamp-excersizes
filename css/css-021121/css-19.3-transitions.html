@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding:0 ;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #ededed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            height: 30vh;
+            width: 70vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* BUTTONS */
+
+        button {
+            min-width: 200px;
+            height: 100px;
+            margin: 0 50px ;
+            border: 3px solid black;
+            padding: 20px 30px;
+            font-size: 2rem;
+            font-weight: 600;
+            overflow: hidden;
+            position: relative;
+            
+            
+        }
+
+        button::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            line-height: 100px;
+            top: 0;
+            left: 0;
+            transition: all .5s;
+        }
+
+        .btn-1 {
+            background-color: transparent;
+        }
+
+        .btn-1::after {
+            background-color: yellow;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+            z-index: -1;
+            transition: all .5s;
+        }
+
+        .btn-1:hover::after {
+            transform: rotate(0);
+        }
+
+
+        .btn-2::before {
+            content: 'Translate';
+            position: absolute;
+            height: 100%;
+            min-width: 100%;
+            line-height: 100px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+        }
+
+        .btn-2::after {
+            background-color: black;
+            transform: translateX(-200px);
+
+        }
+
+        .btn-2:hover::before {
+            color: white;
+        }
+        .btn-2:hover::after {
+            transform: translateX(0);
+        }
+
+
+        .btn-3::after {
+            content: 'YEAH!';
+            background-color: red;
+            transform: translateY(-102px);
+
+        }
+        
+
+        .btn-3:hover::after {
+            transform: translateY(0);
+        }
+
+        .btn-4::after {
+            content: 'Scale & Opacity';
+            background-color: black;
+            color: white;
+            transform: scale(2);
+            opacity: 0;
+        }
+        
+        .btn-4:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+ 
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn-1">Rotate</button>
+        <button class="btn-2"></button>
+        <button class="btn-3">TranslateY</button>
+        <button class="btn-4">Scale & Opacity</button>
+    </div>
+</body>
+</html>
