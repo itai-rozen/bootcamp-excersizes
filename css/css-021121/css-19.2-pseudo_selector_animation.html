@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selector Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #efefef;
+        }
+
+        .box {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            position: relative;
+            transition: all .5s;
+            overflow: hidden;
+
+        }
+
+
+
+
+        .box::after {
+            animation: move-out .5s forwards ease-in-out;
+            content:'';
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            transform: translate(-200px);
+            background-color: purple;
+        }
+
+        .box:hover::after {
+            animation: move-in .5s forwards ease-in-out;
+        }
+
+        @keyframes move-in {
+            to{
+                transform: translate(0);
+                background-color: green;
+            }
+        }
+        @keyframes move-out {
+            from{
+                transform: translate(0);
+                background-color: green;
+            }
+            to {
+                transform: translate(-200px);
+                background-color: purple;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>
