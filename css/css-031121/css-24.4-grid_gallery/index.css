@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #141414;
+
+}
+
+.images-container {
+    background-color: #141414;
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-gap: 10px;
+
+
+
+    grid-template-areas: 
+    "img1 img1 img2 img2 img3 img3 img4 img4"
+    "img1 img1 img2 img2 img3 img3 img8 img8"
+    "img5 img6 img6 img6 img3 img3 img8 img8"
+    "img5 img6 img6 img6 img7 img7 img8 img8"
+    "img9 img9 img10 img10 img7 img7 img8 img8"
+    "img9 img9 img10 img10 img11 img12 img12 img12"
+    "img13 img13 img13 img14 img14 img12 img12 img12"
+    "img13 img13 img13 img14 img14 img12 img12 img12"
+    ;
+}
+
+.img-1 { grid-area: img1; background: url('./images/gal-1.jpeg') no-repeat center center/cover;}
+.img-2 { grid-area: img2; background: url('./images/gal-2.jpeg') no-repeat center center/cover;}
+.img-3 { grid-area: img3; background: url('./images/gal-3.jpeg') no-repeat center center/cover;}
+.img-4 { grid-area: img4; background: url('./images/gal-4.jpeg') no-repeat center center/cover;}
+.img-5 { grid-area: img5; background: url('./images/gal-5.jpeg') no-repeat center center/cover;}
+.img-6 { grid-area: img6; background: url('./images/gal-6.jpeg') no-repeat center center/cover;}
+.img-7 { grid-area: img7; background: url('./images/gal-7.jpeg') no-repeat center center/cover;}
+.img-8 { grid-area: img8; background: url('./images/gal-8.jpeg') no-repeat center center/cover;}
+.img-9 { grid-area: img9; background: url('./images/gal-9.jpeg') no-repeat center center/cover;}
+.img-10 { grid-area: img10; background: url('./images/gal-10.jpeg') no-repeat center center/cover;}
+.img-11 { grid-area: img11; background: url('./images/gal-11.jpeg') no-repeat center center/cover;}
+.img-12 { grid-area: img12; background: url('./images/gal-12.jpeg') no-repeat center center/cover;}
+.img-13 { grid-area: img13; background: url('./images/gal-13.jpeg') no-repeat center center/cover;}
+.img-14 { grid-area: img14; background: url('./images/gal-14.jpeg') no-repeat center center/cover;}
+
+@media (max-width: 500px){
+    .images-container{
+        grid-template-areas: 
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5"
+        "img6"
+        "img7"
+        "img8"
+        "img9"
+        "img10"
+        "img11"
+        "img12"
+        "img13"
+        "img14"
+        ;
+    }
+    .img {
+        height: 50vh;
+    }
+}
