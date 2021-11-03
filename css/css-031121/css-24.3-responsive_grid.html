@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 70%;
+            height: 50vh;
+            display: grid;
+            grid-template-areas: 
+            "header header header header"
+            "sidebar content content sidebar-2"
+            "footer footer footer footer";
+            grid-gap: 1rem;
+        }
+
+        .box {
+            width: auto;
+            border-radius: 13px;
+            color: white;
+            font-size: 2rem;
+            padding: 1rem;
+        }
+
+        .box-1 {
+            grid-area: header;
+            background-color:tomato ;
+            
+        }
+        .box-2 {
+            grid-area: sidebar;
+            background-color: #006C67;
+        }
+        .box-3 {
+            grid-area: content;
+            background-color:darkgreen ;
+        }
+        .box-4 {
+            grid-area: sidebar-2;
+            background-color: purple;
+        }
+        .box-5 {
+            grid-area: footer;
+            background-color:#FFB100 ;
+        }
+
+        @media (max-width:768px){
+            .container {
+                grid-template-areas: 
+                "header header header header "
+                "sidebar content content content"
+                "sidebar-2 sidebar-2 sidebar-2 sidebar-2"
+                "footer footer footer footer";
+            }
+        }
+
+        @media (max-width: 500px){
+            .container {
+                grid-template-areas: 
+                "header "
+                "sidebar"
+                "content"
+                "sidebar-2"
+                "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1">Header</div>
+        <div class="box box-2">Sidebar</div>
+        <div class="box box-3">Content <br /> More content than we had before so this column is now quite tall</div>
+        <div class="box box-4">Sidebar 2</div>
+        <div class="box box-5">Footer</div>
+    </div>
+    
+</body>
+</html>
