@@ -15,9 +15,8 @@ format:
 `Today is Sunday the 31 of January, 2021’ */
 
 const getCurrentDate = () => {
-    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     let d = new Date()
-    let currDay = days[d.getDay()]
+    let currDay =  d.toLocaleDateString('en-US', { weekday: 'long' });  
     let monthDay = d.getUTCDate()
     let monthName = d.toLocaleString('en-us', { month: 'long' })
     let currYear = d.getFullYear()
