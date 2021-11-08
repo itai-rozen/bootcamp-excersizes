@@ -26,7 +26,7 @@ const power = a =>  {
 (a => ( console.log(Math.sqrt(a)) ))(3);
 
 
-((a, b) => {console.log((Math.random() * (a - b) + b))})(3,2)
+((a, b) => {console.log((Math.random() * (a - b) + b));})(3,2)
 
 
 
