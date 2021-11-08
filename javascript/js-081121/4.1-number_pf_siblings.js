@@ -17,7 +17,7 @@
 // 8. Reflect on why we should use the === operator and
 // type conversion in this situation.
 
-let numSiblings = prompt('how many siblings do you have?')
-if (numSiblings == 1) console.log('1 sibling!')
+let numSiblings = +prompt('how many siblings do you have?')
+if (numSiblings === 1) console.log('1 sibling!')
 else if (numSiblings > 1) console.log('More than 1 sibling')
 else console.log('No siblings!')
