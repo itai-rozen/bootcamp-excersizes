@@ -16,12 +16,14 @@ const calcuiateAvg = (n1,n2,n3) => (n1+n2+n3) / 3
 
 const getHighestAvg = (johnAvg,mikeAvg,maryAvg) => {
     if (johnAvg === mikeAvg && mikeAvg === maryAvg) return'DRAW between all teams!'
+
     let highestAvg = Math.max(johnAvg,mikeAvg,maryAvg)
     console.log('highest average: ',highestAvg)
     let winningTeam
     if (highestAvg === johnAvg) winningTeam = "John"
     else if (highestAvg === mikeAvg) winningTeam = "Mike"
     else  (winningTeam = "Mary")
+
     return `the winning team is ${winningTeam}\'s with average of ${highestAvg}`
 }
 // CASE 1
@@ -29,9 +31,11 @@ const getHighestAvg = (johnAvg,mikeAvg,maryAvg) => {
 let johnScore1 = 120
 let johnScore2 = 130
 let johnScore3 = 90
+
 let mikeScore1 = 70
 let mikeScore2 = 50
 let mikeScore3 = 60
+
 let maryScore1 = 88
 let maryScore2 = 90
 let maryScore3 = 45
@@ -39,6 +43,7 @@ let maryScore3 = 45
 let johnAverage = calcuiateAvg(johnScore1,johnScore2,johnScore3)
 let mikeAverage = calcuiateAvg(mikeScore1,mikeScore2,mikeScore3)
 let maryAverage = calcuiateAvg(maryScore1,maryScore2,maryScore3)
+
 console.log('case ONE:  ')
 console.log('===========') 
 console.log('john average: ', johnAverage)

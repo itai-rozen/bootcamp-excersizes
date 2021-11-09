@@ -9,18 +9,21 @@
 // year 2100 is not But 2400 is.
 
 const isLeapYear = year => {
+    // Divisible by 4
     if (year % 4 === 0){
+        // Not divisible by 100
         if (year % 100 !== 0) return true
+            // Divisible by 100 but also by 400 - yes or no
             return (year % 400 === 0)? true : false
     }
     return false
 }
 
 let givenYear = 2012
-console.log(`is ${givenYear} a eap year? `, isLeapYear(givenYear))
+console.log(`is ${givenYear} a leap year? `, isLeapYear(givenYear))
 
 givenYear = 2300
-console.log(`is ${givenYear} a eap year? `, isLeapYear(givenYear))
+console.log(`is ${givenYear} a leap year? `, isLeapYear(givenYear))
 
 givenYear = 2800
-console.log(`is ${givenYear} a eap year? `, isLeapYear(givenYear))
+console.log(`is ${givenYear} a leap year? `, isLeapYear(givenYear))
