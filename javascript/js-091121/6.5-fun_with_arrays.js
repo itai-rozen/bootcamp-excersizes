@@ -31,3 +31,29 @@ for (let i = 0; i < objects.length; i++){
 
 console.log('objects array : ', objects)
 console.log('only values array : ',onlyValues)
+
+const arr2 = [234,2345,'michael',90]
+let objArr = Object.assign({},arr2)
+console.log('original array: ',arr2)
+console.log('array turned to object: ',objArr)
+
+console.log('is the original array is an array? ', Array.isArray(arr2))
+console.log('is the original array is an array? ', Array.isArray(2))
+
+console.log('change on copied array affects on original array:')
+let originalArr = [1,2,3,4]
+let copyArr = originalArr
+copyArr.push(5)
+console.log('original array: ',originalArr)
+console.log('copied array: ',copyArr)
+
+console.log('change on copied array DOESNT affect original array')
+let secondCopy = originalArr.slice()
+secondCopy.push(6)
+console.log('original array: ',originalArr)
+console.log('copied array: ',secondCopy)
+
+
+
+
+
