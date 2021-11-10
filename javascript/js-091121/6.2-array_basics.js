@@ -21,7 +21,7 @@
 
 
 const people = ["Greg", "Mary", "Devon", "James"];
-console.log('array before chages: ',people)
+console.log('array before changes: ',people)
 const slicedArray = people.slice()
 console.log('sliced array: ',slicedArray)
 // 1.

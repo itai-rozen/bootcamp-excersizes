@@ -16,7 +16,7 @@ const filledArray = new Array(100)
 filledArray.fill(obj,0,100)
 console.log('filled array: ',filledArray)
 
-const rangedArray = Array.from(Array(100).keys(), x => x+1)
+const rangedArray = Array.from(Array(100), (x,index) => index+1)
 console.log('array with numbers ranged from 1 to 100: ', rangedArray)
 
 const objects = [
