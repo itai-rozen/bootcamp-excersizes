@@ -14,12 +14,13 @@ console.log('index of the last occurence of "you"', string.lastIndexOf('you'))
 console.log('using indexOf because i want that damn because cookie')
 let copyString = string.slice()
 let indexOfYou = 0
-let lastOccurenceIndex = 0
+let lastOccurenceIndex = -1
+let query = 'more'
 
-// while (indexOfYou !== -1){
-    indexOfYou = string.indexOf('because',lastOccurenceIndex+1)
+while (indexOfYou !== -1){
+    indexOfYou = string.indexOf(query,lastOccurenceIndex+1)
     lastOccurenceIndex = (indexOfYou !== -1)? indexOfYou : lastOccurenceIndex
-// }
+}
 
 
-console.log('index of the last occurence of "because"', lastOccurenceIndex)
+console.log(`index of the last occurence of ${query}:`, lastOccurenceIndex)

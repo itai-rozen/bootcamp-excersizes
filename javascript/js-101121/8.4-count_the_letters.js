@@ -20,6 +20,7 @@ const countLetters = arr => {
             else lettersMap[letter] = 1
         }
     })
+
     // Extra: return the letter with the most occurrences as well
     let maxOccurences = 0
     let maxOccurencesLetter
