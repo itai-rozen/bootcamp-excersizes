@@ -60,6 +60,7 @@ const assignStudent = (studenId, subject) => {
     let {teachers, students} = school
     let studentObj = students.find(student => student.id === studenId)
     let teacherObj = teachers.find(teacher => teacher.subjects.find(teacherSubject => teacherSubject === subject ))
+    console.log('teacher object: ',teacherObj)
     if (teacherObj.capacityLeft > 0) {
         teacherObj.capacityLeft--
         teacherObj.students.push(studentObj)
@@ -70,3 +71,21 @@ assignStudent(13, 'history')
 console.log(school)
 assignStudent(12, 'history')
 assignStudent(11, 'history')
+
+// A method called “assignTeachersSubject” that takes two
+// arguments, the teacher’s id, a new subject.
+// Assign the new subject to that particular teacher if that
+// subject doesn’t exist in their array of subjects
+
+const assignTeachersSubject = (teacherId,newSubject) => {
+    let teacher = findPerson('teacher',teacherId)
+    console.log('teacher: ',teacher)
+    let isSubject = teacher.subjects.find(subject => subject === newSubject)
+    console.log('isSubject: ',isSubject)
+    if (!isSubject) teacher.subjects.push(newSubject)
+}
+
+assignTeachersSubject(1,'art')
+assignTeachersSubject(1,'chemistry')
+console.log(school.teachers)
+

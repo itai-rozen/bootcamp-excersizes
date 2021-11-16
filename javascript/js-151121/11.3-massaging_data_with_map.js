@@ -52,6 +52,7 @@ console.log(getOldies(data))
 // 3. Create a function that returns an object of all the different foods from all
 // the objects as the key and the number of times that food is present in all the
 // objects as the value.
+
 const getFoods = arr => {
     let foodsMap = {}
     arr.forEach(obj => { // Inside data array

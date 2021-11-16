@@ -2,9 +2,9 @@
 // array of integers and returns a new array with all the
 // values in the array passed to the function doubled.
 const array = [1,2,3,4,5,6,7,8,9,10]
-const doubleValue = arr => {
-    return arr.map(n => n * 2)
-}
+
+const doubleValue = arr => arr.map(n => n * 2)
+
 console.log('original array: ',array)
 console.log('doubles (using map):' , doubleValue(array))
 // Write a function called onlyEvenValues which accepts an
@@ -29,14 +29,16 @@ console.log('only even values (using forEach): ',onlyEvenValues(array))
 const showFirstAndLast = arr => {
     const onlyStrs = []
     let newStr = ''
-    arr.forEach((el,i) => {
+    arr.forEach((el) => {
         newStr = ''
-        if (typeof el === 'string') {
+        if (typeof el !== 'string' || el.length < 2) return
+        else {
             newStr += el.charAt(0) + el.charAt(el.length-1)
             onlyStrs.push(newStr)
         }
     })
-    return [onlyStrs[0], onlyStrs[onlyStrs.length-1]]
+    if (onlyStrs.length < 2) return
+    else return [onlyStrs[0], onlyStrs[onlyStrs.length-1]]
 }
 
 let otherArray = [1,'basda',3,4,5,'gabap']

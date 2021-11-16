@@ -51,6 +51,8 @@ const getMovies = arr => {
 }
 
 const getMoviesWithMap = arr =>  arr.map(release => ({ id: release.id, name: release.title }))
+
+
 console.log('original array: ',newReleases)
 console.log('using forEach: ')
 console.log(getMovies(newReleases))
