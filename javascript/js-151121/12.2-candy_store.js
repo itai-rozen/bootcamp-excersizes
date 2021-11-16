@@ -25,7 +25,7 @@ console.log('candy object with id - 5hd7y', getCandy(candyStore, '5hd7y'))
 // The function should return the price (number) of the candy with the specified
 // id.
 
-const getPrice = (storeObj, id) => storeObj.candies.find(candy => candy.id === id).price
+const getPrice = (storeObj, id) => getCandy(storeObj,id).price
 console.log('price of the candy with the id of "as12f"', getPrice(candyStore, 'as12f'))
 console.log('candy object: ', getCandy(candyStore, 'as12f'))
 
