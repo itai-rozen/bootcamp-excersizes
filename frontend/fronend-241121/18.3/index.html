@@ -46,7 +46,7 @@
         const myFourthDiv = document.querySelector("#myFourthDiv");
 
         document.querySelectorAll('div').forEach((div, i) => {
-            window['div' + (i + 1)] = div
+            window[`div${i+1}`] = div
             window['div' + (i+1)].textContent = `Yo! im div number ${i+1}`
             window['div' + (i+1)].style.border = "1px solid brown"
         })

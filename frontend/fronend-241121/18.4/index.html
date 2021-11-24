@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smiley</title>
+    <style>
+        img {
+            width: 100px;
+            display: inline-block;
+            animation: spin;
+            animation-delay: 0.5s;
+            animation-duration: 0.5s;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <label for="smiley"> How many smileys do you want to see?</label>
+    <input id="smiley" name="smiley" type="text">
+    <input type="button" class="btn" value="submit">
+    <div class="smileys-container"></div>
+    
+</body>
+</html>
