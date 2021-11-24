@@ -15,3 +15,6 @@ ans =  nums.reduce((sum,num) => {
 },0)
 console.log('average: ',ans)
 
+
+
+

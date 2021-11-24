@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /
+>
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0" />
+<title>Document</title>
+</head>
+<body>
+<h1>Header</h1>
+<p>Paragraph</p>
+<a href="#">link</a>
+<img src="" alt="" />
+<div class="x">Div with a class</div>
+<div id="y">Div with an id</div>
+<input type="text" />
+<input type="text" />
+<input type="text" />
+</body>
+<script>
+    const elements = document.getElementsByTagName('*')
+    console.log('all elements: ',elements)
+    const header = document.getElementsByTagName('h1')
+    console.log(header)
+    const paragraph = document.getElementsByTagName('p')
+    console.log(paragraph)
+    const link = document.getElementsByTagName('a')
+    console.log(link)
+    const image = document.getElementsByTagName('img')
+    console.log(image)
+    const divs = document.getElementsByTagName('div')
+    console.log(divs)
+    const inputs = document.getElementsByTagName('input')
+    console.log(inputs)
+    const headerQs  = document.querySelector('h1')
+    console.log(headerQs)
+    const paragraphQs  = document.querySelector('p')
+    console.log(paragraphQs)
+    const linkQs  = document.querySelector('a')
+    console.log(linkQs)
+    const imageQs  = document.querySelector('img')
+    console.log(imageQs)
+    const divsQs  = document.querySelectorAll('div')
+    console.log(divs)
+    const inputsQs  = document.querySelectorAll('input')
+    console.log(inputs)
+    inputsQs.forEach((input,i) => console.log(`input ${i+1}:`,input))
+    Array.from(inputs).forEach((input,i) => console.log(`input #${i+1} using querySelector: \n`,input))
+//your js code here
+</script>
+</html>

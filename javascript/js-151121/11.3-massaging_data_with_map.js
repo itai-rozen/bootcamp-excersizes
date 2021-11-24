@@ -59,7 +59,7 @@ const getFoods = arr => {
         let {favoriteFoods} = obj
         for ( foodType in favoriteFoods ){  // inside favoriteFoods object
             favoriteFoods[foodType].forEach(food => { // inside meats/fish array
-                 (foodsMap[food])?  foodsMap[food]++ :  foodsMap[food] = 1
+                (foodsMap[food])?  foodsMap[food]++ :  foodsMap[food] = 1
             })
         }
     })

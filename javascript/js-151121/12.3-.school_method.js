@@ -42,10 +42,9 @@ const school = {
 // 1. A method called “findPerson” that takes two arguments,
 // a type (either a student or teacher), and an id.
 // It will return a particular object of that person.
-
 const findPerson = (type, id) => school[type + 's'].find(person => person.id === id)
 console.log('finding a student with id of 13')
-console.log(findPerson('student',13))
+console.log(school.findPerson('student',13))
 console.log('finding a teacher with id of 2')
 console.log(findPerson('teacher',2))
 
@@ -88,4 +87,15 @@ const assignTeachersSubject = (teacherId,newSubject) => {
 assignTeachersSubject(1,'art')
 assignTeachersSubject(1,'chemistry')
 console.log(school.teachers)
+
+
+let arr1 = [1,2,3,4,5,6]
+let arr2 = [3,4,5,6,7,8,9]
+let sameNums = []
+for (let i = 0; i < arr1.legth; i++){
+    for (let j = 0 ; j < arr2.length; j++){
+        if (arr1[i] === arr2[j]) sameNums.push(arr1[i])
+    }
+}
+
 

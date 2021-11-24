@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        code {
+            display: block;
+            margin: 50px;
+            background-color: #ccc;
+            padding: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>If all elements share the same tagname, I can hold all of them together with 'document.querySelectorAll', loop
+        over them with a forEach method and create variables dynamically.</h2>
+    <h3>Here's what i did:</h3>
+        <code>
+            document.querySelectorAll('div').forEach((div, i) => {
+                window['div' + (i + 1)] = div
+            })
+        </code>
+    <h2>now each div is in a different variable 'div1','div2' etc. i can also inject content & style in them the same way: </h2>
+    <code>
+        document.querySelectorAll('div').forEach((div, i) => { <br/>
+            window['div' + (i + 1)] = div <br />
+            window['div' + (i+1)].textContent = `Yo! im div number ${i+1}` <br/>
+            window['div' + (i+1)].style.border = "1px solid brown" <br/>    
+        }) 
+    </code>
+    <div id="myFirstDiv"></div>
+    <div id="mySecondDiv"></div>
+    <div id="myThridDiv"></div>
+    <div id="myFourthDiv"></div>
+
+    <script>
+        const myFirstDiv = document.querySelector("#myFirstDiv");
+        const mySecondDiv = document.querySelector("#mySecondDiv");
+        const myThirdDiv = document.querySelector("#myThirdDiv");
+        const myFourthDiv = document.querySelector("#myFourthDiv");
+
+        document.querySelectorAll('div').forEach((div, i) => {
+            window['div' + (i + 1)] = div
+            window['div' + (i+1)].textContent = `Yo! im div number ${i+1}`
+            window['div' + (i+1)].style.border = "1px solid brown"
+        })
+        console.log(div1)
+        console.log(div2)
+        console.log(div3)
+        console.log(div4)
+    </script>
+</body>
+
+</html>
