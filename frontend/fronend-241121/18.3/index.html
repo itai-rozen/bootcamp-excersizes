@@ -44,16 +44,18 @@
         const mySecondDiv = document.querySelector("#mySecondDiv");
         const myThirdDiv = document.querySelector("#myThirdDiv");
         const myFourthDiv = document.querySelector("#myFourthDiv");
-
+        
+        const elementsObj = {}
         document.querySelectorAll('div').forEach((div, i) => {
-            window[`div${i+1}`] = div
-            window['div' + (i+1)].textContent = `Yo! im div number ${i+1}`
-            window['div' + (i+1)].style.border = "1px solid brown"
+            elementsObj[`div${i+1}`] = div
+            elementsObj['div' + (i+1)].textContent = `Yo! im div number ${i+1}`
+            elementsObj['div' + (i+1)].style.border = "1px solid brown"
         })
-        console.log(div1)
-        console.log(div2)
-        console.log(div3)
-        console.log(div4)
+        console.log(window)
+        console.log(elementsObj.div1)
+        console.log(elementsObj.div2)
+        console.log(elementsObj.div3)
+        console.log(elementsObj.div4)
     </script>
 </body>
 

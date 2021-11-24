@@ -5,11 +5,13 @@
 // 5. Change the text of the <p> element ot something else of your
 
 
-let liElement = document.querySelector('.start-here')
-liElement.textContent = 'main title'
+let liElement = document.querySelector('ul')
+liElement.querySelector('.start-here').textContent = 'main title'
 let anotherLiElement = document.createElement('li')
 anotherLiElement.textContent = "sub title 4"
-liElement.appendChild(anotherLiElement)
+let childUl = liElement.querySelector('ul')
+console.log(childUl)
+childUl.appendChild(anotherLiElement)
 let listElements = document.querySelectorAll('li')
 let ulElement = document.querySelector('ul')
 ulElement.removeChild(listElements[listElements.length-1])
