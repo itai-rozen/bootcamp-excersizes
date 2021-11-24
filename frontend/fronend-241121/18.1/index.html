@@ -6,7 +6,7 @@
 >
 <meta name="viewport" content="width=device-width,
 initial-scale=1.0" />
-<title>Document</title>
+<title>selecting elements</title>
 </head>
 <body>
 <h1>Header</h1>
@@ -20,8 +20,11 @@ initial-scale=1.0" />
 <input type="text" />
 </body>
 <script>
+    // getting all the elements
     const elements = document.getElementsByTagName('*')
     console.log('all elements: ',elements)
+
+    // getting elements by their tag
     const header = document.getElementsByTagName('h1')
     console.log(header)
     const paragraph = document.getElementsByTagName('p')
@@ -34,6 +37,8 @@ initial-scale=1.0" />
     console.log(divs)
     const inputs = document.getElementsByTagName('input')
     console.log(inputs)
+
+    // getting the elements using querySelector
     const headerQs  = document.querySelector('h1')
     console.log(headerQs)
     const paragraphQs  = document.querySelector('p')
@@ -44,9 +49,13 @@ initial-scale=1.0" />
     console.log(imageQs)
     const divsQs  = document.querySelectorAll('div')
     console.log(divs)
+
+    // looping over elements of the same tag
     const inputsQs  = document.querySelectorAll('input')
     console.log(inputs)
     inputsQs.forEach((input,i) => console.log(`input ${i+1}:`,input))
+    // when grabbed bt getByTagName method, returned value is an 'array-like' object. 
+    // we need to turn it to array first
     Array.from(inputs).forEach((input,i) => console.log(`input #${i+1} using querySelector: \n`,input))
 //your js code here
 </script>
