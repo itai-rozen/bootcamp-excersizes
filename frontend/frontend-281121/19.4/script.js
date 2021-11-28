@@ -85,7 +85,7 @@ div.innerHTML = "what a <b>Treat</b>"
 append(div,'body')
 let btn = create('button')
 btn.addEventListener('click', () => {
-
+    addClass(btn,'dissappear')
     interval = setInterval(GifShower, 3000)
     setTimeout(showStopBtn,20000)
     
@@ -110,8 +110,10 @@ style.innerText += 'body { background: radial-gradient(#1d3, #3f4); text-align: 
 style.innerText += '* {margin: 0; padding: 0; box-sizing: border-box;}'
 style.innerText += 'div { font-size: 2rem; border-bottom: 3px solid black; text-align:center;}'
 style.innerText += 'button { font-size: 2rem; border-radius: 50%;height: 150px; width: 150px; text-align:center;}'
-style.innerText += 'button { margin: 30px; cursor: pointer; background: linear-gradient(orange, yellow);}'
+style.innerText += 'button { opacity: 1;margin: 30px; cursor: pointer; background: linear-gradient(orange, yellow);}'
 style.innerText += '.absolute { position: absolute;}'
 style.innerText += 'img { transition: 0.5s; width: 200px; height: 200px; border-radius: 50%}'
 style.innerText += '.hide { display:none; }'
+style.innerText += '.dissappear { opacity:0; transition: 1s; }'
+
 document.head.append(style)
