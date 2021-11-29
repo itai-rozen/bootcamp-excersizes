@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ddd;
+        }
+        .container {
+            border: 2px solid black;
+            border-radius: 5px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .btn-container {
+            display: flex;
+            margin: 20px;
+            width: 500px;
+            justify-content: space-around;
+        }
+        button {
+            width: 50px;
+            font-size: 2rem;
+            border-radius: 10px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #432;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ratione quia repellat architecto assumenda illum quod ab, rerum ad perspiciatis quaerat corporis totam provident eveniet facilis consectetur cum error neque cupiditate? Aliquid neque ipsam debitis harum? Repellat iusto voluptatum facilis harum consectetur inventore, aliquam recusandae earum cupiditate quia. Tempore consequatur aut commodi doloribus sunt eaque maxime eveniet sint minus inventore magni, sit quam maiores libero? Ducimus accusantium delectus esse ut sint suscipit ab consequuntur maxime, earum id rerum tempora vel officiis facilis blanditiis porro ad quam unde quas veniam aspernatur minus quae! Quidem sunt adipisci minus reiciendis eum et ipsum.
+    </div>
+    <div class="btn-container">
+        <button class="plus">+</button>
+        <button class="minus">-</button>
+    </div>
+
+    <script>
+        const changeFontSize = (e) => {
+            // getting the operator + or -
+            let sign = e.target.textContent
+            // getting computed font size and extracting the number of pixels
+            let fontSize = getComputedStyle(textDiv).fontSize
+            let fontSizePixels = +fontSize.replace('px', '')
+            // so you wont get stuck if you reache the limies
+            if ((fontSizePixels < 7  && sign === '-')|| 
+                (fontSizePixels > 99 && sign === '+')) return
+            fontSizePixels += (sign === '+') ? 1 : -1 
+            fontSizePixels += 'px'
+            textDiv.style.fontSize = fontSizePixels
+        }
+
+        
+        let textDiv = document.querySelector('.container')
+        let incBtn = document.querySelector('.plus')
+        let decBtn = document.querySelector('.minus')
+        incBtn.addEventListener('click',changeFontSize)
+        decBtn.addEventListener('click',changeFontSize)
+    </script>
+</body>
+</html>
