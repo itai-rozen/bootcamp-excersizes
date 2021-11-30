@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    background: url('./surendran-mp-IhWYiwSxm8g-unsplash.jpg') no-repeat center center/cover;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0 0 0 15px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    text-align: center;
+}
+
+.container {
+    background-color: #dfdfdf;
+    border: 2px solid black;
+    margin: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    width: 50vw;
+
+}
+
+.game-container {
+    font-size: 2.5rem;
+    position: relative;
+    height: 50vh;
+}
+
+.modal {
+    height: 100%;
+    width: 100%;
+    background-color: #dfdfdf;
+    position: absolute;
+
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.game-container input {
+    width: 20%;
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.game-container button {
+    height: 50px;
+    width: 20%;
+    background-color: #000;
+    color: #faf;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: 2px solid #faf;
+    cursor: pointer;
+}
+
+.msg-container {
+    height: 10%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.5rem;
+}
+.guessed-letters-container {
+    height: 30%;
+    margin: 10px;
+    padding: 2px;
+    font-size: 1.5rem;
+}
+
+.guessed-letters-list {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+}
+
+li {
+    padding: 0 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.green { color: green; }
+.red { color: red; }

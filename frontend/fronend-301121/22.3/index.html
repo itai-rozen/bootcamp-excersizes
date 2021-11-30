@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Guess the letter!</h1>
+    <div class="game-container container">
+        <div class="input-container">
+            <label>Your Guess</label>
+            <input type="text" maxlength="1" />
+        </div>
+        <button class="submit-btn" >submit</button>
+        <div class="modal container hide">
+            <div>Play again?</div>
+            <button class="confirm-btn">Yeah</button>
+        </div>
+    </div>
+
+
+    <div class="msg-container container">
+        <h2 class="msg"></h2>
+        <h2 class="right-letter hide"></h2>
+    </div>
+
+    <div class="guessed-letters-container container">
+        <h4>Your previous guesses</h4>
+        <ul class="guessed-letters-list">
+        <!-- rendered list of guesses -->
+        </ul>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

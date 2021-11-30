@@ -1,0 +1,21 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type="checkbox"]{
+    height: 100px;
+    width: 100px;
+}
+
+.checked {
+    opacity: 1;
+    transition: ease-in-out .3s;
+}
+
+img {
+    opacity: 0;
+    transition: .3s;
+
+}

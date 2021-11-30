@@ -4,7 +4,7 @@ function someFunction(number) {
         return b;
     }
     console.dir('inside the function',otherFunction)
-    b = 5;  // b value is reassigned and saved as closure of otherFunction
+   var b = 5;  // b value is reassigned and saved as closure of otherFunction
     
     return otherFunction;
 }
