@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="test.js"></script>
+</head>
+
+<body>
+    <div class="el"></div>
+    <h2>Question 1</h2>
+    <h3>In your own words what will this point to and why?(Note
+        this is the global scope)</h3>
+    <code>console.log(this)</code>
+    <p>this will print out the window object with all its properties and bound methods.</p>
+    <h2>Question 2</h2>
+    <h3>a. In your own words what will this point to and why.
+        b. How can you fix this code.</h3>
+    <code>const myObj = {
+        name: "Timmy",
+        greet: () => {
+        console.log(`Hello ${this.name}`);
+        },
+        }; myObj.greet();</code>
+    <p>when calling with an arrow function, 'this' will point to the global scope. We can change it
+        to function declaration and it will fix things up. </p>
+    <code>const myObj = {
+            name: "Timmy",
+            greet() {
+            console.log(`Hello ${this.name}`);
+            }
+            }; myObj.greet();</code>
+
+    <h2>Question 3</h2>
+    <h3>In your own words what will this point to and why?</h3>
+    <code>
+        const myFuncDec = function () {
+            console.log(this);
+            };
+    </code>
+    <p>it will point to the window object</p>
+    <h2>Question 4</h2>
+    <h3>In your own words what will this point to and why?</h3>
+    <code>
+        const myFuncDec = function () {
+            console.log(this);
+            };
+    </code>
+    <p>it will point to the window object</p>
+    <h2>Question 5</h2>
+    <h3>a. In your own words what will this point to and why.
+        b. How can you fix this code.</h3>
+        <code>
+            document.querySelector(".element").addEventListener(() => {
+                console.log(this);
+                });
+        </code>
+    <p>the addEventListener needs to get an event type as parameter to execute. when executed in an 
+        arrow function expression, 'this' will point to the window object. when using 
+    function declaration (with an event), 'this' will point to the element holding it.</p>
+
+
+
+</body>
+
+</html>

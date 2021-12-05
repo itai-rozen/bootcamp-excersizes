@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+
+:root {
+    --primary-color: #5d2a42;
+    --secondary-color: #BCE4F1;
+    --secondary-hover: #57BADB;
+    --box-shadow: 0 0  12px 5px var(--secondary-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .1s;
+}
+*:hover,
+*:focus {
+    transition: .1s;
+}
+
+body {
+    height: 100vh;  
+    width: 60vw;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    font-family: Merriweather, sans-serif;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+ul {
+    list-style: none;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.input-container {
+    height: 15%;
+    width: 100%;
+    padding: 1% 0 3% 0;
+    color: var(--secondary-color);
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.input-container * {
+    margin: 0 1%;
+    padding: 0 1%;
+}
+
+.input-container input,
+.input-container select {
+    outline: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    font-size: 1rem;
+    padding: 5px;
+
+}
+
+select:focus {
+    box-shadow: var(--box-shadow);
+}
+.input-container input:focus {
+    outline: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    box-shadow: var(--box-shadow);
+}
+
+.input-container button {
+    background-color: var(--secondary-color);
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 20%;
+}
+
+.input-container button:hover {
+
+    box-shadow: var(--box-shadow);
+}
+
+.todo-container {
+    overflow-y: auto;
+    height: 75%;
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 2rem 0;
+}
+.todo-header {
+    padding-bottom: 1%;
+    border-bottom: 2px solid var(--secondary-hover);
+}
+.todo-container .inputs-headers {
+    width: 33%;
+    margin-left: 1%;
+}
+
+.todo-item {
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.todo-item button {
+    border: none;
+}
+
+.todo-item:hover {
+    background-color: var(--secondary-hover);
+}
+.todo-item:hover i {
+    background-color: var(--secondary-hover);
+}
+
+.todo-item .item-content {
+    width: 50%;
+}
+
+i { 
+    padding: 0 0.5rem;
+    border: none;
+    background-color: var(--secondary-color);
+}
+
+
+.edit {
+    background-color: wheat;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+
+
+
+
+ /* UTIL */
+
+ .flex {
+     display: flex;
+ }
+
+ .col {
+     flex-direction: column;
+ }
+
+ .pointer {
+     cursor: pointer;
+ }
+
+ .space-between {
+     justify-content: space-between;
+ }
+
+ .br5 {
+     border-radius: 5px;
+ }
+
+ .p10 { padding: 10px; }
+ .m10 { margin: 10px; }

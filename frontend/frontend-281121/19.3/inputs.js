@@ -35,7 +35,7 @@ inputs.forEach((input,i) => {
             alert('password must contain 6 digits')
             return
         }
-
+        
         let digits = data.split('')
         let regex = /\w/i
         let isLetter = digits.some(digit => digit.match(regex))

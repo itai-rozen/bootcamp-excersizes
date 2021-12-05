@@ -1,0 +1,5 @@
+const dqs = el => document.querySelector(el)
+const dqsa = el => document.querySelectorAll(el)
+const append = (el,parent) => parent.append(el)
+const create = el => document.createElement(el)
+const addClass = (el,className) => el.classList.add(className)

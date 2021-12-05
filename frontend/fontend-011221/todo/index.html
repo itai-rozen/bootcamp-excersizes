@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="js/util.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <title>Todo App</title>
+</head>
+
+<body class="flex col">
+    <div class="input-container flex space-between ">
+        <label for="todo-input ">New Todo </label>
+        <input id="todo-input" class="user-input br5" type="text" />
+        <label for="importance">importance</label>
+        <select name="" id="importance" class="importance-select br5">
+            <option value="1">1: very</option>
+            <option value="2">2: slightly</option>
+            <option value="3" selected>3: not so much</option>
+        </select>
+        <button class="add-btn">+</button>
+    </div>
+
+    <div class="todo-container br5">
+        <ul class="todo-header">
+            <li>
+                <div class="inputs-headers flex space-between ">
+                    <p class="completed-header">Completed</p>
+                    <p class="impoprtance-header">Importance</p>
+                    <p  class="content-header">content</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="todo-list">
+        </ul>
+    </div>
+
+</body>
+
+</html>

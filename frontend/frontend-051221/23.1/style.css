@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock{
+    display: flex;
+    font-size: 2rem;
+}
