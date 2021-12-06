@@ -1,9 +1,10 @@
 
 
 const updateClock = () => {
-    const hours = new Date().getHours()
-    const mins = new Date().getMinutes()
-    const secs = new Date().getSeconds()
+    const d = new Date()
+    const hours = d.getHours()
+    const mins = d.getMinutes()
+    const secs = d.getSeconds()
     const hoursEl = document.querySelector('.hours')
 const minutesEl = document.querySelector('.minutes')
 const secondsEl = document.querySelector('.seconds')

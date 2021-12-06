@@ -7,9 +7,29 @@
 const storm = {
 // add code here
 superPower: 'flying',
-printSuperPower() {
+print: printSuperPower
+}
+storm.print()
+
+
+function printSuperPower() {
     console.log("my superpower is " + this.superPower);
-    }
 }
 
-storm.printSuperPower()
+
+let miliSecs = 0
+let secs = 0
+let minutes = 0
+const func = () => {
+    miliSecs += 100
+    if (miliSecs === 1000){
+        secs += 1
+        miliSecs = 0
+    }
+    if (sec = 60) mins += 1
+    if (mins === 60) stop()
+}
+document.querySelector('button').addEventListener('click', stop)
+function stop(){
+    clearInterval()
+}
