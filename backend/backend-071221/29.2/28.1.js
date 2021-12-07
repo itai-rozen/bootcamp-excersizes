@@ -9,7 +9,6 @@ const getJoke = async () => {
     try {
         const   response = await fetch(url)
         const data = await response.json()
-        // console.log(data.contents.jokes[0].joke)
         jokeHeaderEl.textContent = data.contents.jokes[0].joke.title
         jokeEl.textContent = data.contents.jokes[0].joke.text
         imageHolder.src = getRandomGif()
@@ -20,6 +19,8 @@ const getJoke = async () => {
 }
 
 jokeButton.addEventListener('click',  getJoke)
+// Below is same function before refactoring
+// jokeButton.addEventListener('click',  getJoke2) 
 const getRandomGif = () => {
     let currentGif = imageHolder.src
     let randomGifIdx = Math.floor(Math.random() * gifs.length) 
@@ -35,4 +36,18 @@ const gifs = [
     'https://media.giphy.com/media/swPH6f77yLk2I/giphy.gif',
     'https://media.giphy.com/media/gE6IUBRWZd744/giphy.gif'
 ]
+
+// Before Refactoring to new syntax
+
+function getJoke2(){
+    const url = "https://api.jokes.one/jod"
+        fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            jokeHeaderEl.textContent = data.contents.jokes[0].joke.title
+            jokeEl.textContent = data.contents.jokes[0].joke.text
+            imageHolder.src = getRandomGif()
+        })
+        .catch(err => console.log(err))
+}
 
