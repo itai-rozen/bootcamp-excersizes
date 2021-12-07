@@ -5,7 +5,9 @@ const greaterThan10 = n => {
     .then(res => console.log(res))
     .catch(err => console.log(err))
 }
+console.log('i run before greather than 10 func')
 greaterThan10(2)
 greaterThan10(20)
+console.log('i run after greather than 10 func')
 
 

@@ -22,7 +22,7 @@ const modifyArr = function(arr) {
         if (checkNonWords(arr)) resolve(arr)
         else reject('array has some non-words in it!!')
     })
-    .then(res => makeAllCaps(res))
+    .then(res => makeAllCaps(res)
     .then(res => console.log(sortWords(res)))
     .catch(err => console.log(arr,err))
 }
