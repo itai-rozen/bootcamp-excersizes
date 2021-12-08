@@ -3,18 +3,17 @@ const imageHolder = document.querySelector('.random-gif')
 const jokeHeaderEl = document.querySelector('.joke-header')
 const jokeEl = document.querySelector('.joke')
 
-
 const getJoke = async () => {
     const url = "https://api.jokes.one/jod"
     try {
-        const   response = await fetch(url)
-        const data = await response.json()
-        jokeHeaderEl.textContent = data.contents.jokes[0].joke.title
-        jokeEl.textContent = data.contents.jokes[0].joke.text
-        imageHolder.src = getRandomGif()
+        const data = await (await fetch(url)).json();
+        // const data = await response.json();
+        jokeHeaderEl.textContent = data.contents.jokes[0].joke.title;
+        jokeEl.textContent = data.contents.jokes[0].joke.text;
+        imageHolder.src = getRandomGif();
     }
-    catch {
-        err => console.log(err)
+    catch (err) {
+        console.log(err);
     }
 }
 
@@ -50,4 +49,6 @@ function getJoke2(){
         })
         .catch(err => console.log(err))
 }
+
+
 

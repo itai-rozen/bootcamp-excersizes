@@ -12,8 +12,6 @@ const makeAllCaps = wordsArr => wordsArr.map(word => word.toUpperCase())
 const sortWords = wordsArr => wordsArr.sort()
 const checkNonWords = arr => arr.every(word => typeof word === 'string')
 
-
-
 const arr1 = ['all','words','are','strings']
 const arr2 = ['not','all','words','are','strings',1]
 
@@ -22,11 +20,19 @@ const modifyArr = function(arr) {
         if (checkNonWords(arr)) resolve(arr)
         else reject('array has some non-words in it!!')
     })
-    .then(res => makeAllCaps(res)
+    .then(res => makeAllCaps(res))
     .then(res => console.log(sortWords(res)))
     .catch(err => console.log(arr,err))
 }
 
 console.log(modifyArr(arr1))
 console.log(modifyArr(arr2))
+
+const makeAllCaps2 = wordsArr => {
+  return new Promise((resolve, reject) => {
+    resolve(wordsArr.map(word => word.toUpperCase())) 
+  })
+}
+const sortWords2 = wordsArr => wordsArr.sort()
+const checkNonWords2 = arr => arr.every(word => typeof word === 'string')
 
